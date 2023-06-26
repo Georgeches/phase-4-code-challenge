@@ -169,3 +169,199 @@ Processing by RestaurantsController#show as */*
 Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 0.7ms | Allocations: 3020)
 
 
+Started POST "/restaurant_pizzas" for ::1 at 2023-06-26 11:56:12 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/george/moringa/rails/phase-4-code-challenge/app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+..._id, :restaurant_id, presence :true
+...                              ^
+/home/george/moringa/rails/phase-4-code-challenge/app/models/restaurant_pizza.rb:6: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...al_to:1, less_than-or_equal_to:30}
+...                              ^
+):
+  
+app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/restaurant_pizza.rb:6: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/restaurant_pizza.rb:6: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started POST "/restaurant_pizzas/3" for ::1 at 2023-06-26 11:56:54 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/restaurant_pizzas/3"):
+  
+Started POST "/restaurant_pizzas" for ::1 at 2023-06-26 11:57:10 +0300
+  
+SyntaxError (/home/george/moringa/rails/phase-4-code-challenge/app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+..._id, :restaurant_id, presence :true
+...                              ^
+/home/george/moringa/rails/phase-4-code-challenge/app/models/restaurant_pizza.rb:6: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...al_to:1, less_than-or_equal_to:30}
+...                              ^
+):
+  
+app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/restaurant_pizza.rb:6: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/restaurant_pizza.rb:6: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started POST "/restaurant_pizzas" for ::1 at 2023-06-26 11:57:38 +0300
+  
+SyntaxError (/home/george/moringa/rails/phase-4-code-challenge/app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...al_to:1, less_than-or_equal_to:30}
+...                              ^
+):
+  
+app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started POST "/restaurant_pizzas" for ::1 at 2023-06-26 11:58:16 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/george/moringa/rails/phase-4-code-challenge/app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+..._id, :restaurant_id, presence :true
+...                              ^
+):
+  
+app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/restaurant_pizza.rb:5: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started POST "/restaurant_pizzas" for ::1 at 2023-06-26 11:58:43 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>20, "restaurant_id"=>2, "pizza_id"=>2, "restaurant_pizza"=>{"price"=>20, "pizza_id"=>2, "restaurant_id"=>2}}
+[31mUnpermitted parameter: :restaurant_pizza[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mPizza Load (0.2ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mRestaurantPizza Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "pizza_id", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 20], ["pizza_id", 2], ["restaurant_id", 2], ["created_at", "2023-06-26 08:58:43.997360"], ["updated_at", "2023-06-26 08:58:43.997360"]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+Completed 200 OK in 53ms (Views: 0.7ms | ActiveRecord: 11.0ms | Allocations: 22646)
+
+
+Started POST "/restaurant_pizzas" for ::1 at 2023-06-26 11:59:27 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>20, "restaurant_id"=>2, "pizza_id"=>1, "restaurant_pizza"=>{"price"=>20, "pizza_id"=>1, "restaurant_id"=>2}}
+[31mUnpermitted parameter: :restaurant_pizza[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mRestaurantPizza Create (0.6ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "pizza_id", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 20], ["pizza_id", 1], ["restaurant_id", 2], ["created_at", "2023-06-26 08:59:27.820682"], ["updated_at", "2023-06-26 08:59:27.820682"]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+Completed 200 OK in 35ms (Views: 0.7ms | ActiveRecord: 5.1ms | Allocations: 16897)
+
+
+Started POST "/restaurant_pizzas" for ::1 at 2023-06-26 12:13:22 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>34, "restaurant_id"=>3, "pizza_id"=>2, "restaurant_pizza"=>{"price"=>34, "pizza_id"=>2, "restaurant_id"=>3}}
+[31mUnpermitted parameter: :restaurant_pizza[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.8ms | Allocations: 25157)
+
+
+  
+NameError (undefined method `render_unprocessable_entity_response' for class `RestaurantPizzasController'):
+  
+activesupport (6.1.7.3) lib/active_support/rescuable.rb:106:in `method'
+activesupport (6.1.7.3) lib/active_support/rescuable.rb:106:in `handler_for_rescue'
+activesupport (6.1.7.3) lib/active_support/rescuable.rb:91:in `rescue_with_handler'
+activesupport (6.1.7.3) lib/active_support/rescuable.rb:165:in `rescue_with_handler'
+actionpack (6.1.7.3) lib/action_controller/metal/rescue.rb:25:in `rescue in process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/rescue.rb:21:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.3) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+railties (6.1.7.3) lib/rails/engine.rb:539:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/restaurant_pizzas" for ::1 at 2023-06-26 12:15:42 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>34, "restaurant_id"=>3, "pizza_id"=>2, "restaurant_pizza"=>{"price"=>34, "pizza_id"=>2, "restaurant_id"=>3}}
+[31mUnpermitted parameter: :restaurant_pizza[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+Completed 422 Unprocessable Entity in 56ms (Views: 0.3ms | ActiveRecord: 3.0ms | Allocations: 14983)
+
+
+Started POST "/restaurant_pizzas" for ::1 at 2023-06-26 12:16:06 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>34, "restaurant_id"=>3, "pizza_id"=>2, "restaurant_pizza"=>{"price"=>34, "pizza_id"=>2, "restaurant_id"=>3}}
+[31mUnpermitted parameter: :restaurant_pizza[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mPizza Load (0.7ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:3:in `create'
+Completed 422 Unprocessable Entity in 34ms (Views: 0.6ms | ActiveRecord: 2.7ms | Allocations: 14784)
+
+
